@@ -2,7 +2,9 @@ let fields = Array.from(document.getElementsByClassName('cell'));
 let usedFields = [];
 let zerosFields = [];
 let daggersFields = [];
-let nowPlayer = 'dagger';
+let nowPlayer = 'dagger'
+
+let result = document.createElement('h1');
 
 const winFields = [
     [0, 1, 2],
@@ -18,8 +20,9 @@ const winFields = [
 function checkWinner(playerFields, player) {
     for(let i of winFields) {
         if(i.every((elem) => playerFields.includes(elem))) {
-            alert(`Виграли ${player}!`);
-            window.location.href = 'index.html';
+            result.innerText = `Виграли ${player}!`;
+            result.id = 'result_win';
+            document.getElementById('gameContainer').appendChild(result);
         }
     }
 }

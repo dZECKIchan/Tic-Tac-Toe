@@ -16,7 +16,7 @@ body{
     cursor: pointer;
 }
 
-.grid{
+#grid{
     display: grid;
     grid-template-columns: repeat(3, auto);
 }
@@ -26,4 +26,26 @@ body{
     align-items: center;
     font-weight: bold;
     font-size: 200px;
+}
+.choose{
+    background-color: rgb(29, 28, 28);
+    border: none;
+    color: rgb(230, 230, 230);
+    font-weight: bold;
+    font-size: 60px;
+    margin: 20px;
+}
+h1{
+    font-size: 40px;
+}
+#result_draw{
+    font-size: 50px;
+}
+#result_lose{
+    color: #570808;
+    font-size: 50px;
+}
+#result_win{
+    color: #085708;
+    font-size: 50px;
 }
